@@ -28,8 +28,7 @@ class EmphysemaAnalysis:
                 'if_overwrite': True
             },
             'model': {
-                #'model_lung_mask': '/nfs/masi/xuk9/Projects/ThoraxLevelBCA/models/lung_mask' #Original path
-                'model_lung_mask': '/valiant02/masi/krishar1/EmphysemaModelCheckpoints/lung_mask'
+                'model_lung_mask': 'EmphysemaModelCheckpoints/lung_mask' #Create the path to generate the lung masks
             }
         }
 
@@ -102,45 +101,3 @@ class EmphysemaAnalysis:
         emph_score_csv = os.path.join(self.project_dir, 'emph.csv')
         print(f'Save to {emph_score_csv}')
         emph_score_df.to_csv(emph_score_csv, index=False)
-
-# ct_dirs = [
-#     "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/B30f_B50f/B30f_masked",
-#     "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/B30f_B80f/B80f_masked",
-#     "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/B30f_B80f/B30f_masked",
-#     #"/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/STANDARD_BONE/BONE",
-#     #"/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/STANDARD_LUNG/LUNG",
-#     #"/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/STANDARD_BONE/STANDARD",
-#     #"/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/STANDARD_LUNG/STANDARD",
-# ]
-
-# for ct_dir in tqdm(ct_dirs):
-#     emph = EmphysemaAnalysis(in_ct_dir=ct_dir,
-#                              project_dir= ct_dir + '_emphysema')
-
-#     emph.generate_lung_mask()
-#     emph.get_emphysema_mask()
-#     emph.get_emphysema_measurement()
-
-#Run emphysema analysis on the validation data using the masks from the original validation data 
-
-# emph = EmphysemaAnalysis(in_ct_dir = '/valiant02/masi/krishar1/NLST_supplementary_grants/validation_multipath_NLST/validation/LUNGtoB30f/epoch_114',
-#                          project_dir = '/valiant02/masi/krishar1/NLST_supplementary_grants/validation_multipath_NLST/validation/LUNGtoB30f_emphysema/epoch_114')
-
-# # emph.generate_lung_mask()
-# emph.get_emphysema_mask()
-# emph.get_emphysema_measurement()
-
-dirs = [ "/valiant02/masi/krishar1/NLST_supplementary_grants/validation_multipath_NLST/NLST_harmonization_validation_data/B_D/B", 
-        "/valiant02/masi/krishar1/NLST_supplementary_grants/validation_multipath_NLST/NLST_harmonization_validation_data/B_D/D", 
-        "/valiant02/masi/krishar1/NLST_supplementary_grants/validation_multipath_NLST/NLST_harmonization_validation_data/C_D/C",
-        "/valiant02/masi/krishar1/NLST_supplementary_grants/validation_multipath_NLST/NLST_harmonization_validation_data/C_D/D"
-]
-
-
-for emph_dir in tqdm(dirs):
-    emph = EmphysemaAnalysis(in_ct_dir = emph_dir, 
-                            project_dir = emph_dir + '_emphysema')
-    emph.generate_lung_mask()
-    emph.get_emphysema_mask()
-    emph.get_emphysema_measurement()
-    # print(emph_dir + "_emphysema")

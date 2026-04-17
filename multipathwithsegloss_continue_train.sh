@@ -18,7 +18,7 @@ python trainmultipath_stageone.py \
 --netG_decoder resnet_decoder \
 --netD basic \
 --num_threads 25 \
---checkpoints_dir /home-local/krishar1/NLST_AnatomyconstrainedMultipathGAN_RadiologyAI/checkpoints \
+--checkpoints_dir /checkpoints \
 --epoch 72 \
 --epoch_count 73 \
 --stage 1 \

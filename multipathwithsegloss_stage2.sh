@@ -20,4 +20,4 @@ python trainmultipath_stagetwo.py \
 --netG_decoder resnet_decoder \
 --netD basic \
 --num_threads 30 \
---checkpoints_dir /home-local/krishar1/NLST_AnatomyconstrainedMultipathGAN_RadiologyAI/checkpoints
+--checkpoints_dir /checkpoints

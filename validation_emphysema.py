@@ -29,8 +29,7 @@ class EmphysemaAnalysis:
                 'if_overwrite': True
             },
             'model': {
-                #'model_lung_mask': '/nfs/masi/xuk9/Projects/ThoraxLevelBCA/models/lung_mask' #Original path
-                'model_lung_mask': '/valiant02/masi/krishar1/EmphysemaModelCheckpoints/lung_mask'
+                'model_lung_mask': 'EmphysemaModelCheckpoints/lung_mask' #Path to generate the lung masks
             }
         }
 
@@ -106,27 +105,27 @@ class EmphysemaAnalysis:
 
 
 config_val = {
-    "siemens_b50f_lung": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/B30f_B50f/B50f_masked_emphysema",
-    "siemens_b80f_lung": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/B30f_B80f/B80f_masked_emphysema",
-    "ge_bone_lung": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/STANDARD_BONE/BONE_emphysema",
-    "ge_standard_lung": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/STANDARD_BONE/STANDARD_emphysema",
-    "ge_lung_lung": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/NLST_harmonization_validation_data/STANDARD_LUNG/LUNG_emphysema",
+    "siemens_b50f_lung": "/NLST_harmonization_validation_data/B30f_B50f/B50f_masked_emphysema",
+    "siemens_b80f_lung": "/NLST_harmonization_validation_data/B30f_B80f/B80f_masked_emphysema",
+    "ge_bone_lung": "/NLST_harmonization_validation_data/STANDARD_BONE/BONE_emphysema",
+    "ge_standard_lung": "/NLST_harmonization_validation_data/STANDARD_BONE/STANDARD_emphysema",
+    "ge_lung_lung": "/NLST_harmonization_validation_data/STANDARD_LUNG/LUNG_emphysema",
 
-    "b50ftob30f": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/B50ftoB30f",
-    "b80ftob30f": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/B80ftoB30f",
-    "bonetostd": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/BONEtoSTANDARD",
-    "lungtostd": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/LUNGtoSTANDARD",
-    "bonetob30f": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/BONEtoB30f",
-    "lungtob30f": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/LUNGtoB30f",
-    "stdtob30f": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/STANDARDtoB30f",
+    "b50ftob30f": "/validation/B50ftoB30f",
+    "b80ftob30f": "/validation/B80ftoB30f",
+    "bonetostd": "/validation/BONEtoSTANDARD",
+    "lungtostd": "/validation/LUNGtoSTANDARD",
+    "bonetob30f": "/validation/BONEtoB30f",
+    "lungtob30f": "/validation/LUNGtoB30f",
+    "stdtob30f": "/validation/STANDARDtoB30f",
 
-    "b50fto30f_emph": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/B50ftoB30f_emphysema",
-    "b80fto30f_emph": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/B80ftoB30f_emphysema",
-    "bonetostd_emph": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/BONEtoSTANDARD_emphysema",
-    "lungtostd_emph": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/LUNGtoSTANDARD_emphysema",
-    "bonetob30f_emph": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/BONEtoB30f_emphysema",
-    "lungtob30f_emph": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/LUNGtoB30f_emphysema",
-    "stdtob30f_emph": "/valiant02/masi/krishar1/NLST_supplementary_grants/SPIE_2026/validation/STANDARDtoB30f_emphysema"
+    "b50fto30f_emph": "/validation/B50ftoB30f_emphysema",
+    "b80fto30f_emph": "/validation/B80ftoB30f_emphysema",
+    "bonetostd_emph": "/validation/BONEtoSTANDARD_emphysema",
+    "lungtostd_emph": "validation//LUNGtoSTANDARD_emphysema",
+    "bonetob30f_emph": "/validation/BONEtoB30f_emphysema",
+    "lungtob30f_emph": "/validation/LUNGtoB30f_emphysema",
+    "stdtob30f_emph": "/validation/STANDARDtoB30f_emphysema"
 
 }
 
