@@ -94,7 +94,7 @@ class GenerateInferenceMultipathGAN:
         decoder = torch.load(self.output_decoder)[dec]
         encoderdict = OrderedDict()
         decoderdict = OrderedDict()
-            encoderdict["module." + k] = v
+        encoderdict["module." + k] = v
         for k, v in decoder.items():
             decoderdict["module." + k] = v
 
@@ -346,6 +346,31 @@ def validation_synthesis_continued():
         validate_bonetob30f.generate_images("G_BONE_encoder", "G_B30f_decoder")
         validate_lungtob30f.generate_images("G_LUNG_encoder", "G_B30f_decoder")
         validate_stdtob30f.generate_images("G_STD_encoder", "G_B30f_decoder")
+
+
+
+config_validation_stage_2 = {
+    "philips_b":"/validation_multipath_NLST/NLST_harmonization_validation_data/B_D/B",
+    "philips_b_d": "/validation_multipath_NLST/NLST_harmonization_validation_data/B_D/D",
+    "philips_c": "/validation_multipath_NLST/NLST_harmonization_validation_data/C_D/C",
+    "philips_c_d": "/validation_multipath_NLST/NLST_harmonization_validation_data/C_D/D",
+    "btob30f": "/validation_multipath_NLST/validation_stage2/BtoB30f",
+    "ctob30f": "/validation_multipath_NLST/validation_stage2/CtoB30f",
+    "dtob30f": "/validation_multipath_NLST/validation_stage2/DtoB30f",
+    "dtoc": "/validation_multipath_NLST/validation_stage2/DtoC",
+    "dtob": "/validation_multipath_NLST/validation_stage2/DtoB",
+    "btob30f_emph": "/validation_multipath_NLST/validation_stage2/BtoB30f_emphysema",
+    "ctob30f_emph": "/validation_multipath_NLST/validation_stage2/CtoB30f_emphysema",
+    "dtob30f_emph": "/validation_multipath_NLST/validation_stage2/DtoB30f_emphysema",
+    "dtoc_emph": "/validation_multipath_NLST/validation_stage2/DtoC_emphysema",
+    "dtob_emph": "/validation_multipath_NLST/validation_stage2/DtoB_emphysema",
+    "philips_b_lung_mask": "/validation_multipath_NLST/NLST_harmonization_validation_data/B_D/B_emphysema",
+    "philips_b_d_lung_mask": "/validation_multipath_NLST/NLST_harmonization_validation_data/B_D/D_emphysema",
+    "philips_c_lung_mask": "/validation_multipath_NLST/NLST_harmonization_validation_data/C_D/C_emphysema",
+    "philips_c_d_lung_mask": "/validation_multipath_NLST/NLST_harmonization_validation_data/C_D/D_emphysema",
+    "checkpoints": "/NLST_Anatomy_constrained_multipath_cycleGAN_segloss_equal_to_1/NLST_MultipathGAN_with_anatomy_guidance_Stage_two_henrix_2000images_per_epoch"
+}
+
 
 
 
