@@ -25,7 +25,7 @@ class UnalignedMultipathStageOneDataset(BaseDataset):
         BaseDataset.__init__(self, opt)
 
         #When training for four domains, use this code from lines 33-51
-        df_path = "/valiant02/masi/lung_data/training_data/train_dataframes"
+        df_path = "/lung_data/training_data/train_dataframes"
 
         self.b50f_df = pd.read_csv(os.path.join(df_path, 'df_b50f.csv'))
         self.b30f_df = pd.read_csv(os.path.join(df_path, 'df_b30f.csv'))
